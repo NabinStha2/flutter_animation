@@ -25,6 +25,10 @@ class _AnimatedBuilderAndTransformState
     _animation = Tween(begin: 0.0, end: 2 * pi).animate(_controller);
 
     _controller.repeat();
+
+    // _controller.addListener(() {
+    //   log("message :: ${_controller.value} :: ${_animation.value}");
+    // });
   }
 
   @override
@@ -41,8 +45,9 @@ class _AnimatedBuilderAndTransformState
           animation: _controller,
           builder: (context, child) {
             return Transform(
+              alignment: Alignment.center,
               transform: Matrix4.identity()
-                ..rotateZ(
+                ..rotateY(
                   _animation.value,
                 ),
               child: Container(
