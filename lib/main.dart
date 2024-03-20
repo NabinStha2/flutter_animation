@@ -1,5 +1,6 @@
-import 'package:animation_flutter/animated_builder_and_transform.dart';
 import 'package:flutter/material.dart';
+
+import 'chained_animation_curves_and_clippers.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const AnimatedBuilderAndTransform(),
+      home: const ChainedAnimationCurvesAndClippers(),
     );
   }
 }
